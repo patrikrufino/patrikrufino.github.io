@@ -1,0 +1,93 @@
+:root {
+    /*Paleta de cores*/
+    --white: #fff;
+    --white-100: #fefcfc;
+    --gray-300: #969696;
+    --pink: #ff0e53;
+    --orange: #ff6028;
+    --green: #5ea99c;
+}
+
+/* Import Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: var(--white-100);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.max-width {
+    max-width: 1200px;
+}
+
+/*Cores dos textos*/
+
+p, h1, h2, h3, h4, h5, h6 {
+    color: var(--gray-300);
+}
+
+/* navbar styling */
+.navbar {
+    margin-left: 1in;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+
+.navbar.sticky  {
+    padding: 15spx 0;
+    background: var(--white);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    background: -webkit-linear-gradient(var(--orange),var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar.sticky .logo a span {
+    color: var(--white);
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: var(--gray-300);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    background: -webkit-linear-gradient(var(--orange),var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: var(--white);
+}
