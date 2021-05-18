@@ -1,7 +1,7 @@
 :root {
     /*Paleta de cores*/
     --white: #fff;
-    --white-100: #fefcfc;
+    --white-200: #ebe9e9;
     --gray-300: #969696;
     --pink: #ff0e53;
     --orange: #ff6028;
@@ -16,12 +16,16 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    background: var(--white-100);
+}
+
+body {
+    background-color: var(--white-200);
 }
 
 html {
     scroll-behavior: smooth;
 }
+
 
 .max-width {
     max-width: 100%;
@@ -29,11 +33,28 @@ html {
 
 /*Cores dos textos*/
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--gray-300);
 }
 
 /* navbar styling */
+nav {
+    background-color: var(--white);
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+
+}
+
+nav:hover {
+    background-color: white;
+}
+
 .navbar {
     position: fixed;
     width: 100%;
@@ -41,30 +62,27 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 2rem 0 2rem 3rem;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
+    height: 100px;
 }
 
-
-.navbar.sticky  {
-    padding: 15spx 0;
-    background: var(--white);
-}
-
-.navbar .max-width {
+.max-width {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navbar .logo a {
-    background: -webkit-linear-gradient(var(--orange),var(--pink));
+#logo {
+    background: -webkit-linear-gradient(var(--orange), var(--pink));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2.5rem;
     font-weight: 600;
+    transition: .2s ease-in-out;
 }
 
-.navbar.sticky .logo a span {
-    color: var(--white);
+#logo:hover {
+    font-size: 2.4rem;
+
 }
 
 .navbar .menu li {
@@ -80,14 +98,12 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-left: 1.5px;
     transition: color 0.3s ease;
     margin-right: 3rem;
+    transition: .2s ease-in-out;
 }
 
 .navbar .menu li a:hover {
-    background: -webkit-linear-gradient(var(--orange),var(--pink));
+    background: -webkit-linear-gradient(var(--orange), var(--pink));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.navbar.sticky .menu li a:hover {
-    color: var(--white);
+    font-size: 1.15rem;
 }
