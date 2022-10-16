@@ -26,6 +26,7 @@
 
 html {
     scroll-behavior: smooth;
+    text-shadow: 2px 2px 0.5rem rgba(0, 0, 0, 0.8);
 }
 
 html,
@@ -85,8 +86,6 @@ nav .logo__name {
     font-weight: 700;
     letter-spacing: 0.7rem;
     text-transform: uppercase;
-    text-shadow: 2px 2px 0.5rem var(--color-dark);
-
     cursor: pointer;
 }
 
@@ -101,5 +100,78 @@ nav ul li {
     display: inline-block;
     margin: 0 1.6rem;
     cursor: pointer;
-    text-shadow: 2px 2px 0.5rem var(--color-dark);
+}
+
+/* SEÇÃO SOBRE MIM */
+
+main {
+    margin-top: 12rem;
+}
+
+#sobre_mim {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 12rem);
+}
+
+#sobre_mim .texto {
+    flex: 1;
+    margin-right: 1.7rem;
+}
+
+#sobre_mim .texto h1 {
+    font-size: 5.2rem;
+    font-weight: 700;
+    letter-spacing: 0.7rem;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 2.4rem;
+    color: var(--color-aqua);
+}
+
+#sobre_mim .texto h1 en {
+    color: var(--color-white);
+}
+
+#sobre_mim .texto p {
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 2.4rem;
+    color: var(--color-gray);
+}
+
+#sobre_mim .texto ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+#sobre_mim .texto ul li {
+    font-size: 1.6rem;
+    display: inline-block;
+    margin: 0 1.6rem;
+    cursor: pointer;
+}
+
+#sobre_mim .texto li:nth-child(1) {
+    margin-left: 0;
+}
+
+#sobre_mim .foto {
+    height: 36.8rem;
+    width: 36.8rem;
+}
+
+#sobre_mim .foto img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 0.4rem solid var(--color-aqua);
+    object-fit: cover;
+
+    box-shadow: 3px 3px 0.5rem rgba(0, 0, 0, 0.8);
 }
