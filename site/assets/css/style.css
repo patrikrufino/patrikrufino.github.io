@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&display=swap');
+
+:root {
+
+    /* PALETA DE CORES */
+    --color-bg: #282828;
+    --color-red: #fb4934;
+    --color-green: #b8bb26;
+    --color-yellow: #fabd2f;
+    --color-blue: #83a598;
+    --color-purple: #d3869b;
+    --color-aqua: #8ec07c;
+    --color-white: #ebdbb2;
+    --color-gray: #928374;
+    --color-dark: #1d2021;
+
+    /* DEFINE TAMANHO PADRÃO DA MEDIDA REM */
+    font-size: 62.5%;
+
+    /* DEFINE ALTURA PADRÃO DA BARRA DE NAVEGAÇÃO */
+    --nav-height: 5.6rem;
+
+}
+
+/* GERAL */
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-white);
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+
+    overflow: overlay;
+    text-align: center;
+}
+
+.container {
+    margin-inline: auto;
+    padding-inline: 15.2rem;
+}
+
+/* NAVEGAÇÃO */
+nav {
+    height: var(--nav-height);
+    padding-block: 3.2rem;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+}
+
+nav .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo__ico {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1.4rem;
+}
+
+nav .logo__name {
+    align-self: center;
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 0.7rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0.5rem var(--color-dark);
+
+    cursor: pointer;
+}
+
+nav ul {
+    align-self: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1.6rem;
+    cursor: pointer;
+    text-shadow: 2px 2px 0.5rem var(--color-dark);
+}
