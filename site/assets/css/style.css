@@ -55,6 +55,12 @@ body {
     padding-inline: 15.2rem;
 }
 
+hr {
+    border: 0;
+    border-bottom: 3px solid var(--color-aqua);
+    margin-block: 12rem;
+}
+
 /* NAVEGAÇÃO */
 nav {
     height: var(--nav-height);
@@ -111,18 +117,18 @@ main {
     margin-top: 12rem;
 }
 
- #apresentacao {
+#apresentacao {
     display: flex;
     align-items: center;
     height: calc(100vh - 12rem);
 }
 
- #apresentacao .texto {
+#apresentacao .texto {
     flex: 1;
     margin-right: 1.7rem;
 }
 
- .texto h1 {
+.texto h1 {
     font-size: 5.2rem;
     font-weight: 700;
     letter-spacing: 0.7rem;
@@ -132,7 +138,7 @@ main {
     color: var(--color-blue);
 }
 
- #apresentacao .texto h1 en {
+#apresentacao .texto h1 en {
     color: var(--color-white);
 }
 
@@ -144,7 +150,7 @@ main {
     color: var(--color-gray);
 }
 
- #apresentacao .texto ul {
+#apresentacao .texto ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -153,23 +159,23 @@ main {
     justify-content: flex-start;
 }
 
- #apresentacao .texto ul li {
+#apresentacao .texto ul li {
     font-size: 1.6rem;
     display: inline-block;
     margin: 0 1.6rem;
     cursor: pointer;
 }
 
- #apresentacao .texto li:nth-child(1) {
+#apresentacao .texto li:nth-child(1) {
     margin-left: 0;
 }
 
- #apresentacao .foto {
+#apresentacao .foto {
     height: 36.8rem;
     width: 36.8rem;
 }
 
- #apresentacao .foto img {
+#apresentacao .foto img {
     height: 100%;
     width: 100%;
     border-radius: 50%;
@@ -181,7 +187,7 @@ main {
 
 /* SEÇÃO SOBRE MIM */
 
- #sobre_mim {
+#sobre_mim {
     padding-block: 12rem;
     background-color: var(--color-dark);
 }
@@ -206,4 +212,56 @@ main {
     text-align: left;
     margin-bottom: 2.4rem;
     color: var(--color-gray);
+}
+
+/* SKILLS E HOBBIES*/
+
+#skills_hobbies {
+    padding-block: 12rem;
+}
+
+#skills_hobbies h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 0.7rem;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 2.4rem;
+    color: var(--color-blue);
+}
+
+#skills_hobbies .skills__area,
+.hobbies__area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2.4rem;
+    width: 100%;
+}
+
+#skills_hobbies .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: 20rem;
+    margin: 1.6rem;
+    border-radius: 1.6rem;
+    background-color: var(--color-dark);
+    box-shadow: 3px 3px 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+#skills_hobbies .card__img {
+    width: 6.4rem;
+    margin-bottom: 1.6rem;
+}
+
+#skills_hobbies .card__titulo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-green);
 }
