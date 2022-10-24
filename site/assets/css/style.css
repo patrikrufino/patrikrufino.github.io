@@ -312,3 +312,17 @@ h1 {
     text-transform: uppercase;
     color: var(--color-white);
 }
+
+/*FOOTER*/
+
+footer {
+    padding: 4rem 0;
+    background-color: var(--color-dark);
+}
+
+footer p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--color-white);
+}
