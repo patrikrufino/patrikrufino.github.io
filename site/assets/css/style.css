@@ -128,7 +128,7 @@ main {
     margin-right: 1.7rem;
 }
 
-.texto h1 {
+h1 {
     font-size: 5.2rem;
     font-weight: 700;
     letter-spacing: 0.7rem;
@@ -187,7 +187,8 @@ main {
 
 /* SEÇÃO SOBRE MIM */
 
-#sobre_mim {
+#sobre_mim,
+#formacao {
     padding-block: 12rem;
     background-color: var(--color-dark);
 }
@@ -264,4 +265,50 @@ main {
     text-align: center;
     text-transform: uppercase;
     color: var(--color-green);
+}
+
+/*FORMAÇÃO*/
+
+#formacao .formacao__cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2.4rem;
+    width: 100%;
+}
+
+.card__light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 4rem;
+    margin: 1.6rem;
+    border-radius: 1.6rem;
+    background-color: var(--color-bg);
+    box-shadow: 3px 3px 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+#formacao .card__img {
+    width: 30rem;
+    margin-bottom: 1.6rem;
+    border-radius: 0.5rem;
+}
+
+.card__titulo___light {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-green);
+}
+
+.card__descricao {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-white);
 }
