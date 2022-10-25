@@ -1,0 +1,23 @@
+.btn {
+    color: var(--color-green);
+    border-radius: 0;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    transition: all 0.3s ease;
+    margin: 1rem;
+}
+
+.btn__outline {
+    background-color: transparent;
+    border: 1px solid var(--color-green);
+    color: var(--color-green);
+    border-radius: 1rem;
+}
+
+.btn__full {
+    background-color: var(--color-dark);
+    border-radius: 1rem;
+}

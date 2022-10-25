@@ -1,0 +1,31 @@
+.projeto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.projeto__img {
+    max-width: 75rem;
+}
+
+.projeto__descricao {
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto__titulo {
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-aqua);
+    margin-bottom: 1.2rem;
+}
+
+.projeto__paragrafo___descricao {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--color-white);
+    margin-bottom: 3rem;
+}

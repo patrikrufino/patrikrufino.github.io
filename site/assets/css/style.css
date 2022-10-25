@@ -61,6 +61,16 @@ hr {
     margin-block: 12rem;
 }
 
+h1 {
+    font-size: 5.2rem;
+    font-weight: 700;
+    letter-spacing: 0.7rem;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 2.4rem;
+    color: var(--color-blue);
+}
+
 /* NAVEGAÇÃO */
 nav {
     height: var(--nav-height);
@@ -126,16 +136,6 @@ main {
 #apresentacao .texto {
     flex: 1;
     margin-right: 1.7rem;
-}
-
-h1 {
-    font-size: 5.2rem;
-    font-weight: 700;
-    letter-spacing: 0.7rem;
-    text-transform: uppercase;
-    text-align: left;
-    margin-bottom: 2.4rem;
-    color: var(--color-blue);
 }
 
 #apresentacao .texto h1 en {
@@ -217,7 +217,7 @@ h1 {
 
 /* SKILLS E HOBBIES*/
 
-#skills_hobbies {
+#skills_hobbies, #projetos {
     padding-block: 12rem;
 }
 
