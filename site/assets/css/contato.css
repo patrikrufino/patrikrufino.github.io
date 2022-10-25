@@ -1,0 +1,79 @@
+#contato {
+    padding-block: 12rem;
+}
+
+.contato__area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contato__area .contato__img {
+    width: 40%;
+}
+
+.contato__area .contato__msg {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contato__area p {
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 2.4rem;
+    color: var(--color-white);
+}
+
+.contato__area .contato__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    text-align: start;
+}
+
+form {
+    font-size: 2rem;
+}
+
+.contato__area .contato__form input {
+    width: 100%;
+    height: 5rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--color-gray);
+    background-color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+.contato__textarea {
+    width: 100%;
+    height: 20rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 2rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--color-gray);
+    background-color: var(--color-white);
+    margin-bottom: 2rem;
+}
+
+.contato__area .contato__form button {
+    width: 100%;
+    height: 5rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--color-dark);
+    background-color: var(--color-blue);
+    cursor: pointer;
+}
