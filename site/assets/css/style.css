@@ -1,20 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&display=swap');
-
+@import url(./../bootstrap-5.0.2-dist/css/bootstrap.css);
 :root {
-
-    /* PALETA DE CORES */
-    --color-bg: #282828;
-    --color-red: #fb4934;
-    --color-green: #b8bb26;
-    --color-yellow: #fabd2f;
-    --color-blue: #83a598;
-    --color-purple: #d3869b;
-    --color-aqua: #8ec07c;
-    --color-white: #ebdbb2;
-    --color-gray: #928374;
-    --color-dark: #1d2021;
-    --color-light: #fbf1c7;
-    --color-orange: #fe8019;
 
     /* DEFINE TAMANHO PADRÃO DA MEDIDA REM */
     font-size: 62.5%;
