@@ -155,4 +155,72 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.addEventListener('scroll', highlightActiveNav);
+
+  // 6. Fetch Dev.to Articles Dynamically
+  const blogGrid = document.getElementById('blog-grid');
+  const DEVTO_USERNAME = 'patrikrufino';
+
+  if (blogGrid) {
+    fetch(`https://dev.to/api/articles?username=${DEVTO_USERNAME}`)
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
+      .then(articles => {
+        if (!articles || articles.length === 0) {
+          blogGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 2rem;">
+              Nenhum artigo encontrado no momento.
+            </div>
+          `;
+          return;
+        }
+
+        blogGrid.innerHTML = articles.slice(0, 6).map(article => {
+          const date = new Date(article.published_timestamp).toLocaleDateString('pt-BR', {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric'
+          });
+
+          const coverHtml = article.cover_image 
+            ? `<img src="${article.cover_image}" alt="${article.title}" class="blog-cover" loading="lazy">`
+            : `<div class="blog-cover-placeholder">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+               </div>`;
+
+          const tagsHtml = (article.tag_list || []).map(tag => `<span class="blog-tag">#${tag}</span>`).join('');
+
+          return `
+            <article class="blog-card">
+              ${coverHtml}
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <span>${date}</span>
+                  <span>&bull;</span>
+                  <span>${article.reading_time_minutes} min de leitura</span>
+                </div>
+                <h3 class="blog-title">
+                  <a href="${article.url}" target="_blank" rel="noopener noreferrer">${article.title}</a>
+                </h3>
+                <p class="blog-description">${article.description || ''}</p>
+                ${tagsHtml ? `<div class="blog-tags">${tagsHtml}</div>` : ''}
+                <a href="${article.url}" target="_blank" rel="noopener noreferrer" class="blog-link">
+                  <span>Ler artigo completo</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </article>
+          `;
+        }).join('');
+      })
+      .catch(err => {
+        console.error('Erro ao buscar artigos do Dev.to:', err);
+        blogGrid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 2rem;">
+            Não foi possível carregar os artigos no momento. Acesse diretamente no <a href="https://dev.to/${DEVTO_USERNAME}" target="_blank" style="color: var(--accent-primary); text-decoration: underline;">Dev.to</a>.
+          </div>
+        `;
+      });
+  }
 });
