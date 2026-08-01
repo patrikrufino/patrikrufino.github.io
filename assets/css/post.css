@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Styles for Post Reader (post.html)
+   Editorial Typography & Code Block Styling
+   ========================================================================== */
+
+.post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+.post-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--accent-primary);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  transition: transform var(--transition-fast);
+}
+
+.post-back-link:hover {
+  transform: translateX(-4px);
+  color: var(--accent-primary-hover);
+}
+
+.post-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.post-main-title {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  line-height: 1.15;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+}
+
+.post-cover-img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border-color);
+}
+
+/* Post Typography & Content Formatting */
+.post-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-main);
+}
+
+.post-body p {
+  margin-bottom: 1.5rem;
+}
+
+.post-body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.post-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+.post-body ul, .post-body ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.post-body li {
+  margin-bottom: 0.5rem;
+}
+
+.post-body blockquote {
+  border-left: 3px solid var(--accent-primary);
+  padding-left: 1.25rem;
+  margin: 1.75rem 0;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.post-body code:not(pre code) {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--bg-tag);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: var(--accent-dark);
+}
+
+.post-body pre {
+  background: #1a1917;
+  color: #f1ede5;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.925rem;
+  line-height: 1.6;
+}
+
+.post-body pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.post-footer {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.post-skeleton-line {
+  height: 16px;
+  background: #eae5dc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+.post-skeleton-line.short { width: 30%; }
+.post-skeleton-line.title { width: 90%; height: 36px; }
+.post-skeleton-line.text { width: 100%; height: 100px; }
+
+@media (max-width: 768px) {
+  .post-main-title {
+    font-size: 2rem;
+  }
+  .post-body {
+    font-size: 1rem;
+  }
+}

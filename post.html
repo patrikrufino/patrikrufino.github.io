@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title id="postMetaTitle">Artigo | Patrik Rufino</title>
+  <meta name="title" content="Artigo | Patrik Rufino">
+  <meta name="description" id="postMetaDescription" content="Artigo técnico por Patrik Rufino.">
+  <meta name="author" content="Patrik Rufino">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="site/assets/img/ico.png" type="image/x-icon">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/post.css">
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header scrolled" id="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Patrik Rufino Portfolio">
+        <span>Patrik Rufino</span>
+        <span class="brand-code">BLOG</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir Menu de Navegação" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html#home" class="nav-link">Início</a></li>
+        <li><a href="index.html#sobre" class="nav-link">Sobre Mim</a></li>
+        <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+        <li><a href="index.html#projetos" class="nav-link">Projetos</a></li>
+        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li><a href="index.html#formacao" class="nav-link">Formação</a></li>
+        <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main style="padding-top: 130px; min-height: 80vh;">
+    <article class="container post-container">
+      <!-- Back Link -->
+      <a href="blog.html" class="post-back-link">&larr; Voltar para a lista de artigos</a>
+
+      <header class="post-header" id="postHeader">
+        <div class="post-skeleton-line short"></div>
+        <div class="post-skeleton-line title"></div>
+      </header>
+
+      <div class="post-body" id="postBody">
+        <div class="post-skeleton-line text"></div>
+        <div class="post-skeleton-line text"></div>
+        <div class="post-skeleton-line text"></div>
+      </div>
+
+      <footer class="post-footer" id="postFooter">
+        <!-- Tags & Share -->
+      </footer>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-text">
+        &copy; 2026 Patrik Rufino &bull; Editorial &amp; Minimalist Portfolio
+      </div>
+      <div class="footer-text">
+        <a href="blog.html" style="color: var(--accent-primary); font-weight: 500;">&larr; Voltar para o Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Marked.js para converter Markdown em HTML limpo -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/post.js"></script>
+</body>
+
+</html>
